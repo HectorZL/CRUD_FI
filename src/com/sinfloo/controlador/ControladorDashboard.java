@@ -2,24 +2,27 @@ package com.sinfloo.controlador;
 
 import com.sinfloo.modelo.Persona;
 import com.sinfloo.modelo.PersonaDAO;
-import com.sinfloo.vista.vista;
+import com.sinfloo.vista.Dashboard;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.SwingConstants;
+
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
-public class Controlador implements ActionListener {
+public class ControladorDashboard implements ActionListener {
 
     PersonaDAO dao = new PersonaDAO();
     Persona p = new Persona();
-    vista vista = new vista();
+    Dashboard vista = new Dashboard();
     DefaultTableModel modelo = new DefaultTableModel();
 
-    public Controlador(vista v) {
+    public ControladorDashboard(Dashboard v) {
         this.vista = v;
         this.vista.btnListar.addActionListener(this);
         this.vista.btnAgregar.addActionListener(this);

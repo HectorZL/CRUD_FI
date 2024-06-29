@@ -1,14 +1,34 @@
-package com.sinfloo.modelo;
-
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
 
 public class Conexion {
-    String url = "jdbc:mysql://localhost:3306/nombre_base_datos";
-    String user = "root";
-    String pass = "";
-    Connection con;
+    private String url;
+    private String user;
+    private String pass;
+    private Connection con;
+
+    public Conexion() {
+        cargarConfiguracion();
+    }
+
+    private void cargarConfiguracion() {
+        Properties props = new Properties();
+        try (InputStream input = new FileInputStream("config.properties")) {
+            props.load(input);
+
+            url = props.getProperty("db.url");
+            user = props.getProperty("db.user");
+            pass = props.getProperty("db.password");
+        } catch (IOException ex) {
+            System.out.println("Error al cargar el archivo de configuración");
+            ex.printStackTrace();
+        }
+    }
 
     public Connection getConnection() {
         try {
