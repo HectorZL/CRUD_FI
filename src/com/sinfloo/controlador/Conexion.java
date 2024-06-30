@@ -12,7 +12,7 @@ public class Conexion {
     private String url;
     private String user;
     private String pass;
-    private Connection con;
+    public Connection con;
 
     public Conexion() {
         cargarConfiguracion();
@@ -20,7 +20,7 @@ public class Conexion {
 
     private void cargarConfiguracion() {
         Properties props = new Properties();
-        try (InputStream input = new FileInputStream("config.properties")) {
+        try (InputStream input = new FileInputStream("src/config/config.properties")) {
             props.load(input);
 
             url = props.getProperty("db.url");
