@@ -25,7 +25,7 @@ public class UsuarioDAO {
             rs = ps.executeQuery();
             if (rs.next()) {
                 usuario = new Usuario();
-                usuario.setId_user(rs.getInt("id_user"));
+                usuario.setId_user(rs.getInt("id"));
                 usuario.setNombre(rs.getString("nombre"));
                 usuario.setRol(rs.getString("rol"));
                 // No establecemos la contraseña por razones de seguridad
@@ -47,7 +47,7 @@ public class UsuarioDAO {
             rs = ps.executeQuery();
             while (rs.next()) {
                 Usuario usuario = new Usuario();
-                usuario.setId_user(rs.getInt("id_user"));
+                usuario.setId_user(rs.getInt("id"));
                 usuario.setNombre(rs.getString("nombre"));
                 usuario.setRol(rs.getString("rol"));
                 // No establecemos la contraseña por razones de seguridad
@@ -80,7 +80,7 @@ public class UsuarioDAO {
     }
 
     public boolean cambiarContrasena(int idUsuario, String nuevaContrasena) {
-        String sql = "UPDATE Usuario SET contrasena = ? WHERE id_user = ?";
+        String sql = "UPDATE Usuario SET contrasena = ? WHERE id = ?";
         try {
             con = conectar.getConnection();
             ps = con.prepareStatement(sql);
