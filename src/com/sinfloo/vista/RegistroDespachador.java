@@ -2,10 +2,10 @@
 package com.sinfloo.vista;
 
 
-public class RegistroUsuario extends javax.swing.JFrame {
+public class RegistroDespachador extends javax.swing.JFrame {
 
     
-    public RegistroUsuario() {
+    public RegistroDespachador() {
         initComponents();
     }
 
@@ -42,7 +42,7 @@ public class RegistroUsuario extends javax.swing.JFrame {
         jLabel2.setText("CEDULA :");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jLabel1.setText("REGISTRO DE USUARIO");
+        jLabel1.setText("REGISTRO DE DESPACHADOR");
 
         jLabel3.setText("APELLIDO :");
 
@@ -234,20 +234,21 @@ public class RegistroUsuario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RegistroUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistroDespachador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RegistroUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistroDespachador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RegistroUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistroDespachador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RegistroUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistroDespachador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RegistroUsuario().setVisible(true);
+                new RegistroDespachador().setVisible(true);
             }
         });
     }

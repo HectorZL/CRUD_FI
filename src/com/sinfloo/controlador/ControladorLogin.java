@@ -38,7 +38,11 @@ public class ControladorLogin implements ActionListener {
 
     private void validar() {
         String user = vistaLogin.label_usuario.getText();
-        String password = vistaLogin.label_contrasena.getText();
+        // Suponiendo que 'vistaLogin' es tu instancia de la vista que contiene el JPasswordField
+        char[] passwordChars = vistaLogin.label_contrasena.getPassword();
+        String password = new String(passwordChars);
+
+       
         
         if (user.isEmpty() || password.isEmpty()) {
             JOptionPane.showMessageDialog(vistaLogin, "Todos los campos son obligatorios");

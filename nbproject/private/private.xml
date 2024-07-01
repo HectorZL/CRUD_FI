@@ -5,7 +5,7 @@
             <url>src/com/sinfloo/controlador/ControladorLogin.java</url>
             <bookmark id="1">
                 <name/>
-                <line>47</line>
+                <line>51</line>
                 <key/>
             </bookmark>
         </file>
@@ -14,6 +14,7 @@
         <group>
             <file>file:/C:/Users/Sky/Documents/NetBeansProjects/Crud-Java-Escritorio-MVC-master/src/com/sinfloo/vista/Login.java</file>
             <file>file:/C:/Users/Sky/Documents/NetBeansProjects/Crud-Java-Escritorio-MVC-master/src/com/sinfloo/controlador/ControladorLogin.java</file>
+            <file>file:/C:/Users/Sky/Documents/NetBeansProjects/Crud-Java-Escritorio-MVC-master/src/com/sinfloo/controlador/ControladorDashboard.java</file>
         </group>
     </open-files>
 </project-private>
