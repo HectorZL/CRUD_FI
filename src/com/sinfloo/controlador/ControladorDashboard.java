@@ -3,16 +3,11 @@ package com.sinfloo.controlador;
 import com.sinfloo.modelo.Persona;
 import com.sinfloo.modelo.PersonaDAO;
 import com.sinfloo.vista.Dashboard;
+import com.sinfloo.vista.RegistroDespachador;
+
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.List;
-
-import javax.swing.JOptionPane;
-import javax.swing.JTable;
-import javax.swing.SwingConstants;
-
-import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
 public class ControladorDashboard implements ActionListener {
@@ -20,6 +15,8 @@ public class ControladorDashboard implements ActionListener {
     PersonaDAO dao = new PersonaDAO();
     Persona p = new Persona();
     Dashboard vista = new Dashboard();
+    RegistroDespachador registroDespachador = new RegistroDespachador();
+
     DefaultTableModel modelo = new DefaultTableModel();
 
     public ControladorDashboard(Dashboard v) {
@@ -40,6 +37,13 @@ public class ControladorDashboard implements ActionListener {
            // nuevo();
         }
         if (e.getSource() == vista.btnAgregar) {
+
+         registroDespachador.setVisible(true);
+         registroDespachador.setLocationRelativeTo(null);
+         vista.dispose();
+
+
+            
         //    add();
      //       listar(vista.tabla);
          //   nuevo();

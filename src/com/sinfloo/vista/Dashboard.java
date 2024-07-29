@@ -1,15 +1,12 @@
 package com.sinfloo.vista;
-import com.sinfloo.controlador.ControladorDashboard;
 import com.sinfloo.controlador.ControladorLogin;
-import com.sinfloo.modelo.Persona;
-import com.sinfloo.modelo.PersonaDAO;
-import javax.swing.JOptionPane;
+
 
 public class Dashboard extends javax.swing.JFrame{
     public Dashboard() {
         initComponents();
     }
-    @SuppressWarnings("unchecked")
+    
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
