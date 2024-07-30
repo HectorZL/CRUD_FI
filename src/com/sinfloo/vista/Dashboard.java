@@ -1,5 +1,6 @@
 package com.sinfloo.vista;
 import com.sinfloo.controlador.ControladorLogin;
+import com.sinfloo.controlador.ControladorRegistro;
 
 
 public class Dashboard extends javax.swing.JFrame{
@@ -166,16 +167,20 @@ public class Dashboard extends javax.swing.JFrame{
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-                                                 
-
+        RegistroUsuario vRegistro = new RegistroUsuario();
+        ControladorRegistro conRegistro = new ControladorRegistro(vRegistro);
+        vRegistro.setVisible(true);
+        vRegistro.setLocationRelativeTo(null);
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     public static void main(String args[]) {
         
-       Login vlogin = new Login();
-    ControladorLogin conLogin = new ControladorLogin(vlogin);
-    vlogin.setVisible(true);
-    vlogin.setLocationRelativeTo(null);
+
+java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Login().setVisible(true); // Show Login Window first
+            }
+        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

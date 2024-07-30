@@ -3,7 +3,7 @@ package com.sinfloo.controlador;
 import com.sinfloo.modelo.Persona;
 import com.sinfloo.modelo.PersonaDAO;
 import com.sinfloo.vista.Dashboard;
-import com.sinfloo.vista.RegistroDespachador;
+import com.sinfloo.vista.RegistroUsuario;
 
 
 import java.awt.event.ActionEvent;
@@ -15,7 +15,7 @@ public class ControladorDashboard implements ActionListener {
     PersonaDAO dao = new PersonaDAO();
     Persona p = new Persona();
     Dashboard vista = new Dashboard();
-    RegistroDespachador registroDespachador = new RegistroDespachador();
+    RegistroUsuario registroUsuario = new RegistroUsuario();
 
     DefaultTableModel modelo = new DefaultTableModel();
 
@@ -38,10 +38,10 @@ public class ControladorDashboard implements ActionListener {
         }
         if (e.getSource() == vista.btnAgregar) {
 
-         registroDespachador.setVisible(true);
-         registroDespachador.setLocationRelativeTo(null);
-         vista.dispose();
-
+//         registroUsuario.setVisible(true);
+//         registroUsuario.setLocationRelativeTo(null);
+//         vista.dispose();
+            System.out.println("aqui el boton agreagar");
 
             
         //    add();
@@ -172,4 +172,7 @@ public class ControladorDashboard implements ActionListener {
 //            i = i - 1;
 //        }
 //    }
-}}
+}
+
+
+}

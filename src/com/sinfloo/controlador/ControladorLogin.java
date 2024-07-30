@@ -1,7 +1,7 @@
 package com.sinfloo.controlador;
 
-import com.sinfloo.modelo.Usuario;
-import com.sinfloo.modelo.UsuarioDAO;
+import com.sinfloo.modelo.Persona;
+import com.sinfloo.modelo.PersonaDAO;
 import com.sinfloo.vista.Dashboard;
 import com.sinfloo.vista.Login;
 
@@ -14,13 +14,12 @@ import javax.swing.table.DefaultTableModel;
 
 public class ControladorLogin implements ActionListener {
 
-    UsuarioDAO dao = new UsuarioDAO();
-    Usuario u = new Usuario();
-    Login vistaLogin = new Login();
+    PersonaDAO dao = new PersonaDAO();
+    Login vistaLogin;
     DefaultTableModel modelo = new DefaultTableModel();
 
-    public ControladorLogin(Login v) {
-        this.vistaLogin = v;
+    public ControladorLogin(Login vistaLogin) {
+        this.vistaLogin = vistaLogin;
         this.vistaLogin.Btn_login.addActionListener(this);
     }
 
@@ -44,9 +43,9 @@ public class ControladorLogin implements ActionListener {
             return;
         }
 
-        Usuario usuario = dao.validarUsuario(user, password);
+        Persona persona = dao.validarUsuario(user, password);
         
-        if (usuario != null) {
+        if (persona != null) {
             Dashboard dashboard = new Dashboard();
             ControladorDashboard controlDashboard = new ControladorDashboard(dashboard);
             dashboard.setVisible(true);

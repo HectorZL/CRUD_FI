@@ -2,24 +2,39 @@
 package com.sinfloo.modelo;
 
 public class Persona {
+
+    
     int id;
-    int cedula;
+    String cedula;
     String nombre;
     String correo;
     String telefono;
     String rol;
+    String direccion;
     
     public Persona() {
     }
 
-    public Persona(int id,int cedula,String rol,String nombre, String correo, String telefono) {
+    public Persona(int id,String cedula,String rol,String nombre, String correo, String telefono) {
+
         this.id = id;
+        this.rol=rol;
         this.cedula=cedula;
         this.nombre = nombre;
         this.correo = correo;
         this.telefono = telefono;
+        
     }
 
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+    
+    
     public int getId() {
         return id;
     }
@@ -28,11 +43,11 @@ public class Persona {
         this.id = id;
     }
 
-    public int getCedula() {
+    public String getCedula() {
         return cedula;
     }
 
-    public void setCedula(int cedula) {
+    public void setCedula(String cedula) {
         this.cedula = cedula;
     }
 

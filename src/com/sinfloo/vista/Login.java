@@ -9,6 +9,7 @@ public class Login extends javax.swing.JFrame {
     
     public Login() {
         initComponents();
+        ControladorLogin controlador = new ControladorLogin(this);
     }
 
     
@@ -138,12 +139,12 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Btn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_loginActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_Btn_loginActionPerformed
 
     public static void main(String args[]) {
         
-       
+        
        
     }
 
