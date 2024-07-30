@@ -22,6 +22,7 @@ public class ControladorRegistro implements ActionListener {
     public ControladorRegistro(RegistroUsuario vistaRegistro) {
         this.vistaRegistro = vistaRegistro;
         this.vistaRegistro.Btn_Registrar.addActionListener(this);
+        this.vistaRegistro.Btn_Regresar.addActionListener(this);
     }
 
     @Override
@@ -29,6 +30,8 @@ public class ControladorRegistro implements ActionListener {
         if (e.getSource() == vistaRegistro.Btn_Registrar) {
             System.out.println("Botón de registro presionado");
             validarRegistro();
+        } else{
+            vistaRegistro.dispose();
         }
     }
 
