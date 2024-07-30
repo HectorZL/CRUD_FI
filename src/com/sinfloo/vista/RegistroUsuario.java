@@ -234,10 +234,7 @@ public class RegistroUsuario extends javax.swing.JFrame {
 
     public static void main(String args[]) {
        
-//        RegistroUsuario vista = new RegistroUsuario();
-//        ControladorRegistro controlador = new ControladorRegistro(vista);
-//        vista.setVisible(true);
-       
+   
       
     }
 
@@ -258,6 +255,6 @@ public class RegistroUsuario extends javax.swing.JFrame {
     public javax.swing.JTextField label_Nombre;
     public javax.swing.JTextField label_Telefono;
     public javax.swing.JTextField label_contrasena;
-    private javax.swing.JComboBox<String> label_rol;
+    public javax.swing.JComboBox<String> label_rol;
     // End of variables declaration//GEN-END:variables
 }

@@ -52,7 +52,7 @@ public class PersonaDAO {
 
     public int agregar(Persona per) {
         int r = 0;
-        String sql = "INSERT INTO Persona(Cedula, Nombre, Correo, Telefono, Rol) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO Persona(Cedula, Nombre, Correo, Telefono, Rol ,Direccion) VALUES (?, ?, ?, ?, ? ,?)";
 
         try {
             con = conectar.getConnection();
@@ -62,6 +62,7 @@ public class PersonaDAO {
             ps.setString(3, per.getCorreo());
             ps.setString(4, per.getTelefono());
             ps.setString(5, per.getRol());
+            ps.setString(6, per.getDireccion());
             r = ps.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

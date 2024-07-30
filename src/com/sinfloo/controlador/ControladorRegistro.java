@@ -19,8 +19,8 @@ public class ControladorRegistro implements ActionListener {
     RegistroUsuario vistaRegistro ;
     DefaultTableModel modelo = new DefaultTableModel();
 
-    public ControladorRegistro(RegistroUsuario a) {
-        this.vistaRegistro = a;
+    public ControladorRegistro(RegistroUsuario vistaRegistro) {
+        this.vistaRegistro = vistaRegistro;
         this.vistaRegistro.Btn_Registrar.addActionListener(this);
     }
 
@@ -38,13 +38,14 @@ public class ControladorRegistro implements ActionListener {
         String correo = vistaRegistro.label_Correo.getText();
         String telefono = vistaRegistro.label_Telefono.getText();
         String direccion = vistaRegistro.label_Direccion.getText();
-
+        String rol = vistaRegistro.label_rol.getItemAt(0);
+                
         System.out.println("Nombre: " + nombre);
         System.out.println("Cedula: " + cedula);
         System.out.println("Correo: " + correo);
         System.out.println("Teléfono: " + telefono);
         System.out.println("Dirección: " + direccion);
-
+        System.out.println("Rol:"+rol);
         // Validar los campos
         if (nombre.isEmpty() || cedula.isEmpty() || correo.isEmpty() || telefono.isEmpty() || direccion.isEmpty()) {
             JOptionPane.showMessageDialog(vistaRegistro, "Todos los campos son obligatorios");
@@ -57,7 +58,8 @@ public class ControladorRegistro implements ActionListener {
         u.setCorreo(correo);
         u.setTelefono(telefono);
         u.setDireccion(direccion);
-
+        u.setRol(rol);
+        
         int resultado = dao.agregar(u);
         
         if (resultado == 1) {
