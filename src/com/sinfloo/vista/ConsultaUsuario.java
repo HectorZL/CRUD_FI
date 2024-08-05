@@ -4,6 +4,9 @@
  */
 package com.sinfloo.vista;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
 /**
  *
  * @author Sky
@@ -15,6 +18,8 @@ public class ConsultaUsuario extends javax.swing.JFrame {
      */
     public ConsultaUsuario() {
         initComponents();
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        setSize(screenSize.width, screenSize.height);
     }
 
     /**
@@ -26,6 +31,7 @@ public class ConsultaUsuario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jOptionPane1 = new javax.swing.JOptionPane();
         jPanel4 = new javax.swing.JPanel();
         txtId = new javax.swing.JTextField();
         txtNom = new javax.swing.JTextField();
@@ -130,7 +136,6 @@ public class ConsultaUsuario extends javax.swing.JFrame {
                 return false;
             }
         };
-        tabla.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         tabla.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -141,6 +146,7 @@ public class ConsultaUsuario extends javax.swing.JFrame {
         ));
         tabla.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         tabla.setFocusable(false);
+        tabla.setGridColor(new java.awt.Color(255, 255, 255));
         tabla.setRowMargin(4);
         tabla.getTableHeader().setReorderingAllowed(false);
         jScrollPane5.setViewportView(tabla);
@@ -234,6 +240,7 @@ public class ConsultaUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JOptionPane jOptionPane1;
     private javax.swing.JPanel jPanel2;
     public javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane5;

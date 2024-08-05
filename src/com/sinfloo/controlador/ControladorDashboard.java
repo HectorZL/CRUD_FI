@@ -3,7 +3,8 @@ package com.sinfloo.controlador;
 import com.sinfloo.modelo.Persona;
 import com.sinfloo.modelo.PersonaDAO;
 import com.sinfloo.vista.Dashboard;
-import com.sinfloo.vista.RegistroUsuario;
+import com.sinfloo.vista.view_user2;
+// import com.sinfloo.vista.RegistroUsuario;
 
 
 import java.awt.event.ActionEvent;
@@ -14,34 +15,35 @@ public class ControladorDashboard implements ActionListener {
 
     PersonaDAO dao = new PersonaDAO();
     Persona p = new Persona();
-    Dashboard vista = new Dashboard();
-    RegistroUsuario registroUsuario = new RegistroUsuario();
-
+    Dashboard vdashborad = new Dashboard();
+    //RegistroUsuario registroUsuario = new RegistroUsuario();
+    view_user2 vusuario = new view_user2();
+    
     DefaultTableModel modelo = new DefaultTableModel();
 
     public ControladorDashboard(Dashboard v) {
-        this.vista = v;
-        this.vista.btnListar.addActionListener(this);
-        this.vista.btnAgregar.addActionListener(this);
-       // this.vista.btnEditar.addActionListener(this);
-        this.vista.btnDelete.addActionListener(this);
-        this.vista.btnActualizar.addActionListener(this);
-       // this.vista.btnNuevo.addActionListener(this);
+        this.vdashborad = v;
+        this.vdashborad.Btn_Factura.addActionListener(this);
+        this.vdashborad.Btn_Producto.addActionListener(this);
+        this.vdashborad.Btn_Usuario.addActionListener(this);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == vista.btnListar) {
+        if (e.getSource() == vdashborad.Btn_Factura) {
            // limpiarTabla();
         //    listar(vista.tabla);
            // nuevo();
         }
-        if (e.getSource() == vista.btnAgregar) {
-
-//         registroUsuario.setVisible(true);
-//         registroUsuario.setLocationRelativeTo(null);
-//         vista.dispose();
-            System.out.println("aqui el boton agreagar");
+        if (e.getSource() == vdashborad.Btn_Usuario) {
+//            Dashboard dashboard = new Dashboard();
+//            ControladorDashboard controlDashboard = new ControladorDashboard(dashboard);
+//            vusuario.setVisible(true);
+//            vusuario.setLocationRelativeTo(null);
+//            
+////         registroUsuario.setVisible(true);
+////         registroUsuario.setLocationRelativeTo(null);
+//         vdashborad.dispose();
 
             
         //    add();

@@ -2,6 +2,8 @@
 package com.sinfloo.vista;
 
 import com.sinfloo.controlador.ControladorLogin;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 
 
 public class Login extends javax.swing.JFrame {
@@ -9,7 +11,10 @@ public class Login extends javax.swing.JFrame {
     
     public Login() {
         initComponents();
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        setSize(screenSize.width, screenSize.height);
         ControladorLogin controlador = new ControladorLogin(this);
+        
     }
 
     

@@ -5,15 +5,15 @@
             <url>src/com/sinfloo/controlador/ControladorLogin.java</url>
             <bookmark id="1">
                 <name/>
-                <line>51</line>
+                <line>50</line>
                 <key/>
             </bookmark>
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Sky/Documents/NetBeansProjects/Crud-Java-Escritorio-MVC-master/src/com/sinfloo/controlador/ControladorRegistro.java</file>
-            <file>file:/C:/Users/Sky/Documents/NetBeansProjects/Crud-Java-Escritorio-MVC-master/src/com/sinfloo/controlador/ControladorLogin.java</file>
+            <file>file:/C:/Users/Sky/Documents/NetBeansProjects/Crud-Java-Escritorio-MVC-master/src/com/sinfloo/vista/view_user.java</file>
+            <file>file:/C:/Users/Sky/Documents/NetBeansProjects/Crud-Java-Escritorio-MVC-master/src/com/sinfloo/controlador/ControladorViewUser.java</file>
         </group>
     </open-files>
 </project-private>

@@ -17,7 +17,9 @@ public class ControladorRegistro implements ActionListener {
     
     PersonaDAO dao = new PersonaDAO();
     Persona u = new Persona();
+
     RegistroUsuario vistaRegistro ;
+    
     DefaultTableModel modelo = new DefaultTableModel();
 
     public ControladorRegistro(RegistroUsuario vistaRegistro) {
@@ -29,7 +31,6 @@ public class ControladorRegistro implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vistaRegistro.Btn_Registrar) {
-            System.out.println("Botón de registro presionado");
             validarRegistro();
         } else{
             vistaRegistro.dispose();
