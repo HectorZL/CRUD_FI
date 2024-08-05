@@ -3,6 +3,7 @@ package com.sinfloo.controlador;
 import com.sinfloo.modelo.Persona;
 import com.sinfloo.modelo.PersonaDAO;
 import com.sinfloo.vista.Dashboard;
+import com.sinfloo.vista.RegistroUsuario;
 import com.sinfloo.vista.view_user2;
 // import com.sinfloo.vista.RegistroUsuario;
 
@@ -40,10 +41,10 @@ public class ControladorDashboard implements ActionListener {
 //            ControladorDashboard controlDashboard = new ControladorDashboard(dashboard);
 //            vusuario.setVisible(true);
 //            vusuario.setLocationRelativeTo(null);
-//            
-////         registroUsuario.setVisible(true);
-////         registroUsuario.setLocationRelativeTo(null);
-//         vdashborad.dispose();
+            
+          ControladorViewUser conVU = new ControladorViewUser(vusuario);
+          vusuario.setVisible(true);
+          vdashborad.dispose();
 
             
         //    add();
@@ -175,6 +176,8 @@ public class ControladorDashboard implements ActionListener {
 //        }
 //    }
 }
+
+    
 
 
 }

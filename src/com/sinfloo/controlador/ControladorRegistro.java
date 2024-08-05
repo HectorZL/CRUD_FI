@@ -4,6 +4,7 @@ package com.sinfloo.controlador;
 
 import com.sinfloo.modelo.Persona;
 import com.sinfloo.modelo.PersonaDAO;
+import com.sinfloo.vista.Dashboard;
 import com.sinfloo.vista.RegistroUsuario;
 
 import java.awt.event.ActionEvent;
@@ -19,10 +20,21 @@ public class ControladorRegistro implements ActionListener {
     Persona u = new Persona();
 
     RegistroUsuario vistaRegistro ;
+    Dashboard vistaDashboard;
+    
     
     DefaultTableModel modelo = new DefaultTableModel();
 
-    public ControladorRegistro(RegistroUsuario vistaRegistro) {
+    public ControladorRegistro(RegistroUsuario vistaRegistro,Dashboard vistaDashboard) {
+        this.vistaRegistro = vistaRegistro;
+        this.vistaDashboard = vistaDashboard;
+        if (vistaRegistro!= null) {
+            this.vistaRegistro.Btn_Registrar.addActionListener(this);
+            this.vistaRegistro.Btn_Regresar.addActionListener(this);
+        }
+    }
+
+    public ControladorRegistro(RegistroUsuario vRegistro) {
         this.vistaRegistro = vistaRegistro;
         this.vistaRegistro.Btn_Registrar.addActionListener(this);
         this.vistaRegistro.Btn_Regresar.addActionListener(this);
@@ -32,8 +44,13 @@ public class ControladorRegistro implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vistaRegistro.Btn_Registrar) {
             validarRegistro();
-        } else{
+        } 
+        if (e.getSource () == vistaRegistro.Btn_Regresar){
+            
+            vistaDashboard.setVisible(true);
             vistaRegistro.dispose();
+            
+            
         }
     }
 

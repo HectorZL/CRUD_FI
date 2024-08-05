@@ -22,7 +22,14 @@ public class ControladorViewUser implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
        if (e.getSource() == vistausuario.Btn_Registrar_Usuario) {
-             
+//            RegistroUsuario vRegistro = new RegistroUsuario();
+//            ControladorRegistro conRegistro = new ControladorRegistro(vRegistro);
+//            vRegistro.setVisible(true);
+//            vistausuario.dispose();
+             ControladorRegistro conRegistro = new ControladorRegistro(registroUsuario, null);
+            registroUsuario.setVisible(true);
+            vistausuario.dispose();
+            
         } 
     
     }   

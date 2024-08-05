@@ -217,9 +217,9 @@ public class Dashboard extends javax.swing.JFrame{
 //        vRegistro.setVisible(true);
 //        vRegistro.setLocationRelativeTo(null);
 
-          view_user2 vUser = new view_user2();
-          vUser.setVisible(true);
-          vUser.setLocationRelativeTo(null);
+//          view_user2 vUser = new view_user2();
+//          vUser.setVisible(true);
+//          vUser.setLocationRelativeTo(null);
           
     }//GEN-LAST:event_Btn_UsuarioActionPerformed
 
